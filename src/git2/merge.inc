@@ -504,8 +504,10 @@ function git_merge_file(out_: Pgit_merge_file_result; ancestor, ours, theirs: Pg
 (**
  * Merge two files as they exist in the index, using the given common
  * ancestor as the baseline, producing a `git_merge_file_result` that
- * reflects the merge result.  The `git_merge_file_result` must be freed with
- * `git_merge_file_result_free`.
+ * reflects the merge result.  The `git_merge_file_result` must be
+ * freed with `git_merge_file_result_free`.
+ *
+ * At least one of `ancestor`, `ours`, or `theirs` must be non-null.
  *
  * @param out The git_merge_file_result to be filled in
  * @param repo The repository

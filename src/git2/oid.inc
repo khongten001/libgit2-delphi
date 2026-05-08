@@ -16,6 +16,7 @@ const
   {$ENDIF}
 type
   git_oid_t = Integer;
+  Pgit_oid_t = ^git_oid_t;
 
   (*
    * SHA1 is currently the only supported object ID type.

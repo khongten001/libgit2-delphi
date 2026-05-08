@@ -288,7 +288,7 @@ const
    *)
   GIT_REMOTE_DOWNLOAD_TAGS_NONE = 2;
   (**
-   * Ask for the all the tags.
+   * Ask for all the tags.
    *)
   GIT_REMOTE_DOWNLOAD_TAGS_ALL = 3;
 type
@@ -831,6 +831,20 @@ function git_remote_ls(out_: PPPgit_remote_head; size: Psize_t; remote: Pgit_rem
  *)
 
 function git_remote_connected(remote: Pgit_remote): Integer; cdecl; external libgit2_dll {$IFDEF LIBGIT2_DLL_DELAY_LOAD}delayed{$ENDIF};
+
+(**
+ * Get the remote repository's object format.
+ *
+ * The remote (or more exactly its transport) must have connected to
+ * the remote repository. This format is available as soon as the
+ * connection to the remote is initiated and stays connected.
+ *
+ * @param out the resulting object format type
+ * @param remote the remote
+ * @return 0 on success, or an error code
+ *)
+
+function git_remote_oid_type(out_: Pgit_oid_t; remote: Pgit_remote): Integer; cdecl; external libgit2_dll {$IFDEF LIBGIT2_DLL_DELAY_LOAD}delayed{$ENDIF};
 
 (**
  * Cancel the operation
