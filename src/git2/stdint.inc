@@ -39,6 +39,10 @@
 #  endif
 #endif
 *)
+{$IFDEF CPU64BITS}
+  {$DEFINE CPU64}
+{$ENDIF}
+
 // 7.18.1 Integer types
 
 // 7.18.1.1 Exact-width integer types
@@ -77,13 +81,8 @@ type
 
   // 7.18.1.4 Integer types capable of holding object pointers
 
-{$IFDEF CPU64}
-  intptr_t = Int64;
-  uintptr_t = UInt64;
-{$ELSE}
-  intptr_t = Integer;
-  uintptr_t = Cardinal;
-{$ENDIF}
+  intptr_t = IntPtr;
+  uintptr_t = UIntPtr;
 
 // 7.18.1.5 Greatest-width integer types
 
