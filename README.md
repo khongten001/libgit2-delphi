@@ -3,18 +3,18 @@
 Details
 -------
 
-Delphi / Free Pascal bindings for [libgit2](https://www.libgit2.org/) v1.9(.3).
+Delphi / Free Pascal bindings for [libgit2](https://www.libgit2.org/) v1.9(.6).
 
 Since I could not find anything very up to date in the Delphi/Pascal world for recent libgit2 versions I decided to do something myself with assistance from [CHelper](https://wiki.freepascal.org/Chelper).
 
-No packages at this time, just add the LibGit2.pas file to a project and ensure that the git2/\*.inc files are available and Windows builds of the git2.dll is available below (built with Visual Studio 2026).
+No packages at this time, just add the LibGit2.pas file to a project and ensure that the git2/\*.inc files are available and Windows builds of the git2.dll is available.
 
 So far we are only using it on the Windows 32-bit platform so no idea how it will work on other platforms, but any fixes and/or improvements would be welcome.
 
 Windows Binaries
 ----------------
 
-Now included as part of the releases.
+Now included as part of the releases (built with Visual Studio 2026).
 
 License
 -------

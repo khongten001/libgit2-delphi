@@ -88,7 +88,7 @@ type
     (** Name of the configuration entry (normalized). *)
     name_: PAnsiChar;
     (** Literal (string) value of the entry. *)
-    Value: PAnsiChar;
+    value: PAnsiChar;
     (** The type of backend that this entry exists in (eg, "file"). *)
     backend_type: PAnsiChar;
     (**
